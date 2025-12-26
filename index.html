@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SceneFuse: Semantic Contextual Embedding for Next‑gen Experiences Ad-Fusion - Pitch Document</title>
+  <style>
+    :root {
+      --bg-page: #e5ecf5;
+      --bg-card: #ffffff;
+      --accent: #2563eb;
+      --accent-soft: #dbeafe;
+      --accent-2: #f97316;
+      --accent-3: #10b981;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --border-subtle: #cbd5e1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background: radial-gradient(circle at top, #f1f5f9 0, var(--bg-page) 55%, #dbe2ee 100%);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 32px auto 40px;
+      padding: 16px;
+    }
+
+    .card {
+      background: var(--bg-card);
+      border-radius: 18px;
+      padding: 32px 40px 40px;
+      box-shadow:
+        0 18px 40px rgba(15, 23, 42, 0.1),
+        0 0 0 1px rgba(148, 163, 184, 0.35);
+      border: 1px solid var(--border-subtle);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 0 0 10px;
+      color: #0f172a;
+    }
+
+    header p {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+      justify-content: center;
+    }
+
+    .pill {
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #bfdbfe;
+      color: #1d4ed8;
+      background: #eff6ff;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin: 26px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0f172a;
+    }
+
+    h2 span.index {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #ffffff;
+      background: var(--accent);
+      border-radius: 999px;
+      padding: 2px 9px;
+    }
+
+    h3 {
+      font-size: 1.02rem;
+      margin: 16px 0 6px;
+      color: #111827;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--text-main);
+      margin: 6px 0 10px;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+      margin: 4px 0 10px;
+      font-size: 0.94rem;
+      color: var(--text-main);
+    }
+
+    li {
+      margin-bottom: 4px;
+    }
+
+    .section-highlight {
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-top: 6px;
+      background: linear-gradient(135deg, #eff6ff, #e0f2fe);
+      border: 1px solid #bfdbfe;
+    }
+
+    .columns-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .tagged-list li::marker {
+      color: var(--accent-2);
+    }
+
+    .footer-note {
+      margin-top: 26px;
+      padding-top: 16px;
+      border-top: 1px dashed #cbd5e1;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .card {
+        padding: 24px 16px 28px;
+      }
+      .columns-2 {
+        grid-template-columns: 1fr;
+      }
+      header h1 {
+        font-size: 1.55rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <header>
+      
+        <h1 style="color: #2448e9;"> Semantic Contextual Embedding for Next‑gen Experiences Ad-Fusion</h1>
+         <p style="color: #ed3399; font-size: 30px;">(SceneFuse)</p>
+        <p>Non‑intrusive, AI‑driven for the next generation of streaming experiences.</p>
+        <div class="pill-row">
+          <div class="pill">AI &amp; Computer Vision</div>
+          <div class="pill">Dynamic Ad Insertion</div>
+          <div class="pill">Personalized Experiences</div>
+          <div class="pill">Platform Monetization</div>
+        </div>
+      </header>
+
+      <h2><span class="index">01</span> Executive Summary</h2>
+      <p>
+        This proposal introduces a next-generation video streaming and advertising platform that
+        removes disruptive pre‑roll and mid‑roll ads by embedding branded content directly into
+        objects within the video scene. The solution sustains and potentially increases ad
+        revenue while enhancing viewer satisfaction and unlocking new monetization models for
+        content creators.
+      </p>
+
+      <h2><span class="index">02</span> Problem Statement</h2>
+      <p>
+        Current ad-supported streaming relies on interruptive formats that cut away from the
+        content to show standalone ads. This breaks immersion and leads to measurable drops in
+        watch time and engagement.
+      </p>
+      <ul class="tagged-list">
+        <li>Frequent ad breaks cause frustration and drive users toward ad-blockers or competing platforms.</li>
+        <li>Irrelevant and repetitive ads reduce attention, recall, and brand impact.</li>
+        <li>Premium “ad-free” tiers cannibalize impressions and limit inventory growth.</li>
+        <li>Creators are forced to compromise viewer experience to earn revenue.</li>
+      </ul>
+
+      <h2><span class="index">03</span> Proposed Solution Overview</h2>
+      <div class="section-highlight">
+        <p>
+          Replace interruptive ad breaks with <strong>in‑scene embedded advertisements</strong> that transform
+          existing objects—walls, billboards, screens, vehicles, clothing, and digital displays—
+          into dynamic, context-aware ad placements while the video plays uninterrupted.
+        </p>
+      </div>
+      <ul>
+        <li>Playback remains continuous; no pre‑roll or mid‑roll interruptions.</li>
+        <li>The same master video can serve many campaigns via dynamic overlays.</li>
+        <li>Each viewer can see different, personalized ads in the same content.</li>
+        <li>Ad creatives can be updated in real time without re‑editing videos.</li>
+      </ul>
+
+      <h2><span class="index">04</span> Core Capabilities</h2>
+
+      <h3>4.1 In‑Video Object Detection &amp; Placement</h3>
+      <ul>
+        <li>Use computer vision models to detect planar and semi‑planar surfaces such as walls, posters, T‑shirts, boards, and screens.</li>
+        <li>Track surfaces across frames to guarantee temporal consistency and realism.</li>
+        <li>Apply perspective‑correct ad textures that respect camera angle and motion.</li>
+        <li>Model lighting and occlusion to avoid floating or artificial‑looking overlays.</li>
+      </ul>
+
+      <h3>4.2 Personalization &amp; Recommendation Engine</h3>
+      <ul>
+        <li>Leverage viewing history, declared interests, location, and device context (with consent) to build user profiles.</li>
+        <li>Use a recommendation model to rank ads per impression opportunity and enforce frequency capping and pacing.</li>
+        <li>Support experimentation (A/B tests, multi‑variant tests) for creative and placement optimization.</li>
+      </ul>
+
+      <h3>4.3 Dynamic Ad Rendering Pipeline</h3>
+      <ul>
+        <li>Render ads at playback time using server‑side, edge, or client‑side compositing, depending on device capabilities.</li>
+        <li>Keep master video and ad overlays in separate tracks for flexibility and future campaigns.</li>
+        <li>Enable instant switching of creatives when campaigns start, pause, or exhaust budget.</li>
+      </ul>
+
+      <h3>4.4 Measurement &amp; Analytics</h3>
+      <ul>
+        <li>Capture impressions, viewability (time on screen, size, position), and engagement (clicks, taps, QR scans).</li>
+        <li>Attribute performance by content category, creator, placement type, and audience segment.</li>
+        <li>Provide near real‑time dashboards for advertisers, creators, and internal teams.</li>
+      </ul>
+
+      <h2><span class="index">05</span> Value Proposition</h2>
+      <div class="columns-2">
+        <div>
+          <h3>Viewers</h3>
+          <ul>
+            <li>Uninterrupted, cinema‑like viewing without hard ad breaks.</li>
+            <li>More relevant, less intrusive ad experiences blended into the story world.</li>
+            <li>Reduced need for ad‑blockers and fewer reasons to abandon sessions mid‑stream.</li>
+          </ul>
+
+          <h3>Content Creators</h3>
+          <ul>
+            <li>Monetize without sacrificing watch time or audience trust.</li>
+            <li>Activate back catalog content with fresh campaigns over time.</li>
+            <li>Define which scenes and objects are allowed or excluded from ad use.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Advertisers &amp; Brands</h3>
+          <ul>
+            <li>High‑impact, always‑on placements with stronger recall than skippable pre‑rolls.</li>
+            <li>Precision targeting and personalization, improving conversion and ROI.</li>
+            <li>Brand‑safe context through content classification and creator controls.</li>
+          </ul>
+
+          <h3>Platform / Organization</h3>
+          <ul>
+            <li>Differentiated product vs. traditional ad‑supported streaming.</li>
+            <li>Premium inventory with potential for higher CPMs and sponsorship packages.</li>
+            <li>Improved retention, engagement, and total watch time across the catalog.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-note">
+        Internal pitch document – for review and approval.
+      </div>
+    </div>
+  </div>
+</body>
+</html>
