@@ -210,6 +210,26 @@
       text-align: right;
     }
 
+    .title-with-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      white-space: nowrap;      /* 🔥 keeps logo + text on same line */
+    }
+    
+    .title-with-logo span {
+      white-space: normal;      /* allow text itself to wrap */
+      text-align: center;
+    }
+    
+    .title-with-logo img {
+      height: 40px;
+      width: auto;
+      flex-shrink: 0;           /* prevent logo from shrinking */
+    }
+
+
 
 
     @media (max-width: 768px) {
