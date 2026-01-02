@@ -200,6 +200,15 @@
       backface-visibility: hidden;    /* Safari fix */
       transform: translateZ(0);       /* GPU layer */
     }
+    
+    .ai-note {
+      margin-top: 8px;
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.6);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0.2px;
+    }
+
 
 
     @media (max-width: 768px) {
@@ -224,16 +233,19 @@
          <p style="color: #ed3399; font-size: 30px;">SceneFuse</p>
         <p></p>
         <div class="pill-row">
-          <div class="pill">AI &amp; Computer Vision</div>
+          <div class="pill">AI/ML</div>
+          <div class="pill">Recommendation System</div>
           <div class="pill">Dynamic Ad Insertion</div>
           <div class="pill">Personalized Experiences</div>
-          <div class="pill">Platform Monetization</div>
+          
         </div>
       </header>
 
 <div style="position: relative; z-index: 2; margin-top: 24px;">
 
-
+  <div class="ai-note">
+  AI-crafted experience preview
+  </div>
   <div class="video-grid">
     <div class="video-box">
       <video
@@ -286,7 +298,7 @@
         <li>A single master video can support multiple advertising campaigns through <strong>dynamic, in-scene ad overlays.</strong></li>
         <li>Different viewers can see different, genre-aligned advertisements <strong>within the same video scene, based on their preferences and behaviour.</strong></li>
       </ul>
-      <h2><span class="index">04</span> Summary</h2>
+      
       <h2><span class="index">03</span> Summary</h2>
       <p>
         This proposal presents a <strong>next-generation video streaming with advertising platform that eliminates disruptive pre-roll and mid-roll ads by seamlessly embedding branded content directly into objects within the video scene.</strong> In parallel, the platform incorporates an intelligent recommendation system that analyses user viewing behaviour.
