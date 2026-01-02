@@ -155,6 +155,52 @@
       color: var(--text-muted);
       text-align: center;
     }
+    /* Ensure card never clips children */
+    .card {
+      overflow: visible;              /* 🔴 critical */
+      position: relative;
+      z-index: 1;
+    }
+    video {
+  outline: none;
+  background-color: #000;
+}
+
+    /* Section wrapper */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+      position: relative;
+      z-index: 2;                     /* stay above previous sections */
+    }
+
+    /* Video container */
+    .video-box {
+      border-radius: 14px;
+      overflow: hidden;               /* clip video, not parent */
+      background: #000;
+      position: relative;
+      z-index: 2;
+      isolation: isolate;             /* 🧠 prevents bleed-through */
+      box-shadow:
+        0 10px 24px rgba(15, 23, 42, 0.14),
+        0 0 0 1px rgba(148, 163, 184, 0.4);
+    }
+
+    /* Video element */
+    .video-box video {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+      position: relative;
+      z-index: 1;
+      backface-visibility: hidden;    /* Safari fix */
+      transform: translateZ(0);       /* GPU layer */
+    }
+
 
     @media (max-width: 768px) {
       .card {
@@ -175,8 +221,8 @@
       <header>
       
         <h1 style="color: #2448e9;"> Semantic Contextual Embedding for Next‑gen Experiences Ad-Fusion</h1>
-         <p style="color: #ed3399; font-size: 30px;">(SceneFuse)</p>
-        <p>Non‑intrusive, AI‑driven for the next generation of streaming experiences.</p>
+         <p style="color: #ed3399; font-size: 30px;">SceneFuse</p>
+        <p>AI‑driven for the next generation of streaming experiences.</p>
         <div class="pill-row">
           <div class="pill">AI &amp; Computer Vision</div>
           <div class="pill">Dynamic Ad Insertion</div>
@@ -185,74 +231,76 @@
         </div>
       </header>
 
-      <h2><span class="index">01</span> Executive Summary</h2>
-      <p>
-        This proposal introduces a next-generation video streaming and advertising platform that
-        removes disruptive pre‑roll and mid‑roll ads by embedding branded content directly into
-        objects within the video scene. The solution sustains and potentially increases ad
-        revenue while enhancing viewer satisfaction and unlocking new monetization models for
-        content creators.
-      </p>
+<div style="position: relative; z-index: 2; margin-top: 24px;">
+  <h2><span class="index">01</span> Product Preview</h2>
+
+  <p>
+    Visual examples demonstrating seamless, in-scene ad embedding across
+    different content scenarios.
+  </p>
+
+  <div class="video-grid">
+    <div class="video-box">
+      <video
+        src="/Users/bhara-zstch1566/Projects/Trade Show/Scenefuse/SCENEFUSE/media/SceneFuse_AI_Ad_Fusion_Video.mov"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </div>
+
+    <div class="video-box">
+      <video
+        src="/Users/bhara-zstch1566/Projects/Trade Show/Scenefuse/SCENEFUSE/media/SceneFuse_AI_Video_Streaming_Demo.mov"
+        autoplay
+        loop
+        muted
+        playsinline
+      ></video>
+    </div>
+  </div>
+</div>
+
+
 
       <h2><span class="index">02</span> Problem Statement</h2>
       <p>
-        Current ad-supported streaming relies on interruptive formats that cut away from the
-        content to show standalone ads. This breaks immersion and leads to measurable drops in
-        watch time and engagement.
+        Current ad-supported streaming relies on interruptive formats that cut away from the content to show standalone ads. This breaks immersion and leads to measurable drops in watch time and engagement. At the same time, most platforms underutilize user behaviour data, delivering generic content feeds and broadly targeted ads that fail to reflect individual preferences. <strong>The absence of a deeply personalized recommendation system results in irrelevant content discovery and repetitive, poorly matched advertising—reducing attention, recall, and overall brand effectiveness.</strong>
       </p>
       <ul class="tagged-list">
         <li>Frequent ad breaks cause frustration and drive users toward ad-blockers or competing platforms.</li>
-        <li>Irrelevant and repetitive ads reduce attention, recall, and brand impact.</li>
-        <li>Premium “ad-free” tiers cannibalize impressions and limit inventory growth.</li>
-        <li>Creators are forced to compromise viewer experience to earn revenue.</li>
+        <li>Most platforms deliver generic content feeds with limited user-specific recommendations, making content discovery inefficient and reducing long-term engagement.</li>
+        <li>Ads are often repetitive and poorly aligned with user interests or content genre, leading to low attention, weak recall, and diminished brand impact.</li>
+        <li>The lack of a unified system that combines personalized recommendations with non-disruptive advertising prevents platforms from optimizing user experience, advertiser performance, and creator monetization simultaneously.</li>
       </ul>
 
-      <h2><span class="index">03</span> Proposed Solution Overview</h2>
+      <h2><span class="index">03</span> Proposed Solution</h2>
       <div class="section-highlight">
         <p>
-          Replace interruptive ad breaks with <strong>in‑scene embedded advertisements</strong> that transform
-          existing objects—walls, billboards, screens, vehicles, clothing, and digital displays—
-          into dynamic, context-aware ad placements while the video plays uninterrupted.
+          Replace interruptive ad breaks with <strong>in-scene embedded advertisements</strong> that seamlessly transform existing objects walls, 
+          billboards, screens, vehicles, clothing, and digital displays into dynamic, context aware ad placements, personalized through 
+          <strong>Intelligent Recommendation systems</strong> that adapt to each viewer’s interests and viewing context, all while the video plays 
+          completely uninterrupted.
         </p>
       </div>
       <ul>
-        <li>Playback remains continuous; no pre‑roll or mid‑roll interruptions.</li>
-        <li>The same master video can serve many campaigns via dynamic overlays.</li>
-        <li>Each viewer can see different, personalized ads in the same content.</li>
-        <li>Ad creatives can be updated in real time without re‑editing videos.</li>
+        <li>A user-specific recommendation system analyses watch time, <strong>genre preferences</strong>, and engagement behaviour to deliver highly personalized content feeds.</li>
+        <li>Advertisements are <strong>embedded directly into the video scene itself</strong>, appearing naturally on existing visual elements such as walls, billboards, screens, vehicles, clothing, and digital displays.</li>
+        <li>Video playback remains fully continuous, <strong>eliminating disruptive pre-roll and mid-roll ad interruptions.</strong></li>
+        <li>A single master video can support multiple advertising campaigns through <strong>dynamic, in-scene ad overlays.</strong></li>
+        <li>Different viewers can see different, genre-aligned advertisements <strong>within the same video scene, based on their preferences and behaviour.</strong></li>
       </ul>
-
-      <h2><span class="index">04</span> Core Capabilities</h2>
-
-      <h3>4.1 In‑Video Object Detection &amp; Placement</h3>
-      <ul>
-        <li>Use computer vision models to detect planar and semi‑planar surfaces such as walls, posters, T‑shirts, boards, and screens.</li>
-        <li>Track surfaces across frames to guarantee temporal consistency and realism.</li>
-        <li>Apply perspective‑correct ad textures that respect camera angle and motion.</li>
-        <li>Model lighting and occlusion to avoid floating or artificial‑looking overlays.</li>
-      </ul>
-
-      <h3>4.2 Personalization &amp; Recommendation Engine</h3>
-      <ul>
-        <li>Leverage viewing history, declared interests, location, and device context (with consent) to build user profiles.</li>
-        <li>Use a recommendation model to rank ads per impression opportunity and enforce frequency capping and pacing.</li>
-        <li>Support experimentation (A/B tests, multi‑variant tests) for creative and placement optimization.</li>
-      </ul>
-
-      <h3>4.3 Dynamic Ad Rendering Pipeline</h3>
-      <ul>
-        <li>Render ads at playback time using server‑side, edge, or client‑side compositing, depending on device capabilities.</li>
-        <li>Keep master video and ad overlays in separate tracks for flexibility and future campaigns.</li>
-        <li>Enable instant switching of creatives when campaigns start, pause, or exhaust budget.</li>
-      </ul>
-
-      <h3>4.4 Measurement &amp; Analytics</h3>
-      <ul>
-        <li>Capture impressions, viewability (time on screen, size, position), and engagement (clicks, taps, QR scans).</li>
-        <li>Attribute performance by content category, creator, placement type, and audience segment.</li>
-        <li>Provide near real‑time dashboards for advertisers, creators, and internal teams.</li>
-      </ul>
-
+      <h2><span class="index">04</span> Summary</h2>
+      <p>
+        This proposal presents a <strong>next-generation video streaming with advertising platform that eliminates disruptive pre-roll and mid-roll ads by seamlessly embedding branded content directly into objects within the video scene.</strong> In parallel, the platform incorporates an intelligent recommendation system that analyses user viewing behaviour.
+      </p>
+      <p>
+        By aligning <strong>genre-specific recommendations with contextually and behaviourally relevant embedded advertisements</strong>, the platform ensures a non-intrusive, personalized viewing experience while enabling brands to reach precisely targeted audiences within content they already engage with. 
+      </p>
+      <p>
+        This dual approach enhances viewer satisfaction, improves ad effectiveness, sustains and potentially increases advertising revenue, and unlocks scalable monetization opportunities for content creators and advertisers alike.
+      </p>
       
 
       <div class="footer-note">
